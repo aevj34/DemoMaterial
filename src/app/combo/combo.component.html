@@ -1,0 +1,13 @@
+<mat-form-field class="m-5" (click)="activeText()">
+    <mat-select [formControl]=" bankCtrl " (selectionChange)="change($event.value)" placeholder="Seleccione " #singleSelect>
+
+        <mat-option>
+            <ngx-mat-select-search [placeholderLabel]=" 'Buscar ...' " [formControl]="bankFilterCtrl "></ngx-mat-select-search>
+        </mat-option>
+
+        <mat-option *ngFor="let filt of filtered | async ; let i = index" [value]="getKey(filt)">
+            {{getValue(filt)}}
+        </mat-option>
+
+    </mat-select>
+</mat-form-field>

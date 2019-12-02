@@ -15,13 +15,15 @@ import {MatButtonModule, MatCheckboxModule,MatRadioModule, MatCardModule } from 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PruebaComponent } from './prueba/prueba.component';
+import { ComboComponent } from './combo/combo.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PruebaComponent
+    PruebaComponent,
+    ComboComponent
   ],
   imports: [
     BrowserModule,
